@@ -1,6 +1,6 @@
 # Calendar Wallpaper
 
-![gif]('./src/assets/calendar.gif')
+![gif](./src/assets/calendar.gif)
 
 # Quick-Start Guide
 
