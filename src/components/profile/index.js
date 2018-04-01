@@ -6,6 +6,11 @@ export default class Profile extends Component {
 		count: 0
 	};
 
+	increaseCount = () => {
+		let count = this.state.count + 1;
+		this.setState({ count });
+	}
+
 	// update the current time
 	updateTime = () => {
 		let time = new Date().toLocaleString();
@@ -35,7 +40,8 @@ export default class Profile extends Component {
 				<p>This is the user profile for a user named {user}.</p>
 
 				<div>Current time: {time}</div>
-				<div>Profile route mounted {count} times.</div>
+				<div>Profile route mounted {count} times!</div>
+				<button onClick={this.increaseCount}> Increase Count </button>
 			</div>
 		);
 	}

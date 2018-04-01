@@ -1,28 +1,63 @@
 import { h, Component } from 'preact';
-import { Router } from 'preact-router';
 
-import Header from './header';
-import Home from './home';
-import Profile from './profile';
+import 'font-awesome/css/font-awesome.min.css'
+
+import Calendar from './calendar';
+import Month from './month';
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
 	 *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
 	 *	@param {string} event.url	The newly routed URL
 	 */
-	handleRoute = e => {
-		this.currentUrl = e.url;
-	};
-
-	render() {
+	state = {
+		selectedMonth: '',
+		events: [{ eventDate: "2018-June-9", eventText: "Birthday", color: "#00ffff" }]
+	}
+	selectMonth = selectedMonth => {
+		this.setState({
+			selectedMonth
+		})
+	}
+	returnHome() {
+		this.setState({
+			selectedMonth: ''
+		})
+	}
+	handleUpdateEvents = (newEvents) => {
+		let { events } = this.state
+		events.push(...newEvents)
+		this.setState({
+			events
+		})
+		console.log('app', this.state.events)
+	}
+	onBlur() {
+		if (!event.currentTarget.contains(event.relatedTarget)) {
+			this.returnHome()
+		}
+	}
+	render({ }, { events }) {
 		return (
 			<div id="app">
-				<Header />
-				<Router onChange={this.handleRoute}>
-					<Home path="/" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
-				</Router>
+				{(this.state.selectedMonth === '')
+					?
+					<Calendar
+						onSelectMonth={this.selectMonth}
+						selectedMonth={this.state.selectedMonth}
+						eventCycle={this.handleUpdateEvents.bind(this)}
+						events={events}
+					/>
+					:
+					<Month
+						month={this.state.selectedMonth}
+						onSelectMonth={this.selectMonth}
+						selectedMonth={this.state.selectedMonth}
+						eventCycle={this.handleUpdateEvents.bind(this)}
+						events={events}
+						onBlurChange={this.onBlur.bind(this)}
+					/>
+				}
 			</div>
 		);
 	}

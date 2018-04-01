@@ -88,12 +88,17 @@
     "webpack-dev-server": "^2.4.4"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.5",
+    "moment": "^2.21.0",
     "preact": "^8.1.0",
     "preact-compat": "^3.15.0",
+    "preact-onclickoutside": "teachtyler/preact-onclickoutside",
     "preact-render-to-string": "^3.6.0",
     "preact-router": "^2.5.1",
     "promise-polyfill": "^7.0.1",
     "proptypes": "^1.0.0",
+    "react-hint": "^3.0.1",
     "serve": "^6.0.0"
   }
 }
