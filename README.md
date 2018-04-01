@@ -2,6 +2,9 @@
 
 ![gif](./src/assets/calendar.gif)
 
+Idea forked from: 
+[Parallax flipping calendar](https://codepen.io/Antreas/pen/gmoJGE)
+
 # Quick-Start Guide
 
 - [Installation](#installation)
@@ -68,7 +71,7 @@ npm run build
 > 
 > **[Netlify](https://www.netlify.com/docs/cli/) Example:** `netlify deploy`
 >
-> [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/developit/preact-boilerplate)
+> [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/teachtyler/calendar-wallpaper)
 
 
 **6. Start local production server with [serve](https://github.com/zeit/serve):**
@@ -78,7 +81,6 @@ npm start
 ```
 
 > This is to simulate a production (CDN) server with gzip. It just serves up the contents of `./build`.
-
 
 
 ---
