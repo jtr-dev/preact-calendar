@@ -1,13 +1,6 @@
-# Preact Boilerplate / Starter Kit [![Build Status](https://travis-ci.org/developit/preact-boilerplate.svg?branch=master)](https://travis-ci.org/developit/preact-boilerplate) [![Preact Slack Community](https://preact-slack.now.sh/badge.svg)](https://preact-slack.now.sh)
+# Calendar Wallpaper
 
-:guitar: Ready-to-rock [Preact] starter project, powered by [webpack]. **[(View Demo)](https://preact-boilerplate.surge.sh)**
-
-> ### :rocket: Note: We now recommend [Preact CLI](https://github.com/developit/preact-cli/) for new projects.
->
-> [Preact CLI](https://github.com/developit/preact-cli/) is a natural evolution of this boilerplate, and improves on it in every way. In a single dependency, you get a friendly command line project creation and build tool with development & production modes. Preact CLI requires _no configuration at all_, and even does **automatic code-splitting** without you lifting a finger!  It also produces bundles roughly half the size of preact-boilerplate.
-
----
-
+![gif]('./src/assets/calendar.gif')
 
 # Quick-Start Guide
 
@@ -24,34 +17,30 @@
 **1. Clone this repo:**
 
 ```sh
-git clone --depth 1 https://github.com/developit/preact-boilerplate.git my-app
-cd my-app
+git clone https://github.com/teachtyler/calendar-wallpaper.git calendar 
+cd calendar
 ```
 
-
-**2. Make it your own:**
+**2. Install the dependencies:**
 
 ```sh
-rm -rf .git && git init && npm init
+yarn
 ```
-
-> :information_source: This re-initializes the repo and sets up your NPM project.
-
-
-**3. Install the dependencies:**
-
+or If you don't have yarn, which I recommend
 ```sh
-npm install
+npm i
 ```
 
-> You're done installing! Now let's get started developing.
+
+
+> You're done installing!
 
 
 
 ## Development Workflow
 
 
-**4. Start a live-reload development server:**
+**3. Start a live-reload development server:**
 
 ```sh
 npm run dev
@@ -59,7 +48,7 @@ npm run dev
 
 > This is a full web server nicely suited to your project. Any time you make changes within the `src` directory, it will rebuild and even refresh your browser.
 
-**5. Testing with `mocha`, `karma`, `chai`, `sinon` via `phantomjs`:**
+**4. Testing with `mocha`, `karma`, `chai`, `sinon` via `phantomjs`:**
 
 ```sh
 npm test
@@ -67,7 +56,7 @@ npm test
 
 > 🌟 This also instruments the code in `src/` using [isparta](https://github.com/douglasduteil/isparta), giving you pretty code coverage statistics at the end of your tests! If you want to see detailed coverage information, a full HTML report is placed into `coverage/`.
 
-**6. Generate a production build in `./build`:**
+**5. Generate a production build in `./build`:**
 
 ```sh
 npm run build
@@ -82,7 +71,7 @@ npm run build
 > [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/developit/preact-boilerplate)
 
 
-**5. Start local production server with [serve](https://github.com/zeit/serve):**
+**6. Start local production server with [serve](https://github.com/zeit/serve):**
 
 ```sh
 npm start
@@ -96,6 +85,16 @@ npm start
 
 
 ## Structure
+
+
+# Preact Boilerplate / Starter Kit [![Build Status](https://travis-ci.org/developit/preact-boilerplate.svg?branch=master)](https://travis-ci.org/developit/preact-boilerplate) [![Preact Slack Community](https://preact-slack.now.sh/badge.svg)](https://preact-slack.now.sh)
+
+:guitar: Ready-to-rock [Preact] starter project, powered by [webpack]. **[(View Demo)](https://preact-boilerplate.surge.sh)**
+
+> ### :rocket: Note: We now recommend [Preact CLI](https://github.com/developit/preact-cli/) for new projects.
+>
+> [Preact CLI](https://github.com/developit/preact-cli/) is a natural evolution of this boilerplate, and improves on it in every way. In a single dependency, you get a friendly command line project creation and build tool with development & production modes. Preact CLI requires _no configuration at all_, and even does **automatic code-splitting** without you lifting a finger!  It also produces bundles roughly half the size of preact-boilerplate.
+
 
 Apps are built up from simple units of functionality called Components. A Component is responsible for rendering a small part of an application, given some input data called `props`, generally passed in as attributes in JSX. A component can be as simple as:
 
@@ -172,6 +171,10 @@ This project includes [preact-compat] alias in as `react` and `react-dom` right 
 
 MIT
 
+## Thanks
+[Preact]   
+[preact-compat]  
+[webpack] 
 
 [Preact]: https://github.com/developit/preact
 [preact-compat]: https://github.com/developit/preact-compat

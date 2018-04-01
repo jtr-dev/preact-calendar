@@ -18,7 +18,6 @@ export default class Days extends Component {
             backgroundImage: `radial-gradient(circle at center, ${eventExists && momentStrInEvents.color} 2px, transparent 1px)`
         }
 
-
         const renderEventList = () => (
             <div className={style.eventList}>
                 {eventExists && events.length > 0 && (events.slice(0, 5).map((event, i) =>
@@ -30,12 +29,9 @@ export default class Days extends Component {
             </div>
         )
 
-
-
         // background-image: radial-gradient(circle at center,cyan 1px, transparent 1px);
 
         return (
-
             <th
                 className={`${(day === selectedDate) && style.selectedDay} ${eventExists && style.eventsExist}`}
                 style={eventExists && eventsColor}
