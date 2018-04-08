@@ -37,9 +37,9 @@ export default class Weeks extends Component {
         let { last, weeks } = this.state
 
         if (last === 0) {
-            last = (7 - Number(start)) + 1
+            last = (7 - start) + 1
         } else {
-            last = Number(last) + 7
+            last = last + 7
         }
 
         weeks.push(last)

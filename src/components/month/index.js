@@ -27,7 +27,7 @@ const renderMonth = (month) => {
     const year = now.format('YYYY').toString()
     const monthId = months.indexOf(month) + 1
     const daysInMonth = moment(`${year}-${monthId}`, "YYYY-MM").daysInMonth()
-    const startOfMonth = moment(`${year}-${monthId}`).startOf('month').format('d');
+    const startOfMonth = moment(`${year}-${monthId}`, "YYYY-MM").startOf('month').format('d');
 
     return { year, monthId, daysInMonth, startOfMonth }
 }
@@ -79,7 +79,7 @@ export default class Month extends Component {
     }
     render({ month, onSelectMonth, selectedMonth, onBlurChange, eventCycle, events }, { year, daysInMonth, startOfMonth, cardBack, selectedDate }) {
         return (
-            <div tabindex="0" onBlur={onBlurChange} className={`${style.container}`} style={(selectedMonth === '') ? CalendarScale : MonthScale}>
+            <div autofocus tabindex="0" onBlur={onBlurChange} className={`${style.container}`} style={(selectedMonth === '') ? CalendarScale : MonthScale}>
                 <div onClick={(selectedMonth === '')
                     && onSelectMonth.bind(this, month)}
                     className={`${style.card} ${(cardBack && style.flipped)}`}>

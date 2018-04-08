@@ -6,9 +6,10 @@ const ReactHint = ReactHintFactory({ createElement: h, Component })
 export default class Days extends Component {
 
     shouldComponentUpdate(props, state) {
-        return props.selectedDate !== this.props.selectedDate || props.day !== typeof Number
+        return props.selectedDate !== this.props.selectedDate || state !== this.state || props.day !== typeof Number
     }
-    // eventDate: "2018-June-9"
+
+    // event.eventDate: "2018-June-9"
     render({ day, month, year, selectDate, selectedDate, events }) {
         const momentStr = `${year}-${month}-${day}`,
             momentStrInEvents = events.find(event => event.eventDate === momentStr),
@@ -28,8 +29,6 @@ export default class Days extends Component {
                 ))}
             </div>
         )
-
-        // background-image: radial-gradient(circle at center,cyan 1px, transparent 1px);
 
         return (
             <th
