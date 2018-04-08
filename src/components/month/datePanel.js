@@ -26,18 +26,6 @@ export default class DatePanel extends Component {
             momentStrInEvents = events.find(event => event.eventDate === momentStr),
             eventExists = (momentStrInEvents && momentStrInEvents.eventDate === momentStr)
 
-
-        // const renderEventList = () => (
-        //     <div className={style.eventList}>
-        //         {eventExists && events.length > 0 && (events.slice(0, 5).map((event, i) =>
-        //             event.eventDate === momentStr &&
-        //             <div style={{ boxShadow: `-2px 0px 0px 0px ${event.color}`, marginBottom: '5px' }}>
-        //                 {event.eventText}
-        //             </div>
-        //         ))}
-        //     </div>
-        // )
-
         return ((day === 0) ? (
             <div className={style.date}>
                 <div className={style.datecont}>

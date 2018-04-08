@@ -32,12 +32,12 @@ export default class App extends Component {
 		})
 		console.log('app', this.state.events)
 	}
-	onBlur() {
+	onBlur(event) {
 		if (!event.currentTarget.contains(event.relatedTarget)) {
 			this.returnHome()
 		}
 	}
-	render({ }, { events }) {
+	render({ /* props */ }, { events }) {
 		return (
 			<div id="app">
 				{(this.state.selectedMonth === '')

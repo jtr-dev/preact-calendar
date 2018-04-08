@@ -18,7 +18,7 @@
     "webpack"
   ],
   "license": "MIT",
-  "author": "Jason Miller <jason@developit.ca>",
+  "author": "Tyler Roberts <dnbxna@gmail.com>",
   "jest": {
     "setupFiles": [
       "./test/setup.js"

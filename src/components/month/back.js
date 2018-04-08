@@ -40,6 +40,7 @@ export default class Back extends Component {
         }))
     }
     submitForm = (e) => {
+        e.preventDefault();
         this.props.eventCycle([this.state.event])
         this.setState({
             newEvent: !this.state.newEvent,
