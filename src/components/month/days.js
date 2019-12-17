@@ -1,7 +1,5 @@
 import { h, Component } from 'preact'
 import style from './style.less'
-import ReactHintFactory from 'react-hint'
-const ReactHint = ReactHintFactory({ createElement: h, Component })
 
 export default class Days extends Component {
 
