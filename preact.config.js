@@ -1,22 +1,24 @@
 // ... imports or other code up here ...
-
 // these props are both optional
 export default {
     // you can add preact-cli plugins here
+    /*
     plugins: [
         // either a function
         // (you'd probably import this because you can use the `webpack` function instead of an inline plugin)
-        // function () { },
-        // // strings also work (they get imported by preact-cli), useful for the json config
-        // 'plugin-name',
-        // // with options
-        // [
-        //     'plugin-name',
-        //     {
-        //         option: true,
-        //     },
-        // ],
+        function () {
+        },
+        // strings also work (they get imported by preact-cli), useful for the json config
+        'plugin-name',
+        with options
+        [
+            'plugin-name',
+            {
+                option: true,
+            },
+        ],
     ],
+    */
 	/**
 	 * Function that mutates the original webpack config.
 	 * Supports asynchronous changes when a promise is returned (or it's an async function).
@@ -28,6 +30,8 @@ export default {
 	 **/
     webpack(config, env, helpers, options) {
         /** you can change the config here **/
-        
+        // Fixes warning in moment-with-locales.min.js 
+        //   Module not found: Error: Can't resolve './locale' in ...
+        config.resolve.alias['moment$'] = 'moment/moment.js'
     },
 }
