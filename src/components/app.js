@@ -4,6 +4,10 @@ import 'font-awesome/css/font-awesome.min.css'
 
 import Calendar from './calendar';
 import Month from './month';
+import moment from 'moment';
+import 'moment/locale/en-gb';
+moment.locale('en-gb');
+
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
@@ -12,7 +16,7 @@ export default class App extends Component {
 	 */
 	state = {
 		selectedMonth: '',
-		events: [{ eventDate: "2018-June-9", eventText: "Birthday", color: "#00ffff" }]
+		events: [{ eventDate: "2019-June-9", eventText: "Birthday", color: "#00ffff" }]
 	}
 	selectMonth = selectedMonth => {
 		this.setState({

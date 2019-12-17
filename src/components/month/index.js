@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import style from './style.less';
+import style from './style';
 
 import Weeks from './weeks'
 import DatePanel from './datePanel'
@@ -79,7 +79,7 @@ export default class Month extends Component {
     }
     render({ month, onSelectMonth, selectedMonth, onBlurChange, eventCycle, events }, { year, daysInMonth, startOfMonth, cardBack, selectedDate }) {
         return (
-            <div autofocus tabindex="0" onBlur={onBlurChange} className={`${style.container}`} style={(selectedMonth === '') ? CalendarScale : MonthScale}>
+            <div autofocus tabIndex="0" onBlur={onBlurChange} className={`${style.container}`} style={(selectedMonth === '') ? CalendarScale : MonthScale}>
                 <div onClick={(selectedMonth === '')
                     && onSelectMonth.bind(this, month)}
                     className={`${style.card} ${(cardBack && style.flipped)}`}>
